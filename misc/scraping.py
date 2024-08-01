@@ -1,44 +1,47 @@
 import requests
 from bs4 import BeautifulSoup
 
-BASE_URL = 'http://vitibrasil.cnpuv.embrapa.br/'
+BASE_URL = 'http://vitibrasil.cnpuv.embrapa.br/index.php?ano={year}&opcao={option}&subopcao={suboption}'
 
+def get_data(year='', option='', suboption='' ):
+    url = BASE_URL.format(year=year, option=option, suboption=suboption)
+    response = requests.get(url)
+    response.raise_for_status()  # Levanta um erro se a requisição falhar
 
-def get_production_data():
-    response = requests.get(f'{BASE_URL}producao')
     soup = BeautifulSoup(response.content, 'html.parser')
-    # Lógica de scraping específica para a aba de produção
-    data = {}
-    return data
 
+    # Capturando o texto da <p class="text_center">
+    text_p = soup.find('p', class_='text_center')
+    title_text = text_p.get_text(strip=True) if text_p else 'Texto não encontrado'
 
-def get_processing_data():
-    response = requests.get(f'{BASE_URL}processamento')
-    soup = BeautifulSoup(response.content, 'html.parser')
-    # Lógica de scraping específica para a aba de processamento
-    data = {}
-    return data
+    # Capturando a tabela
+    table = soup.find('table', {'class': 'tb_base tb_dados'})
+    if not table:
+        return {'error': 'Tabela não encontrada'}, 404
 
+    # Extraindo cabeçalhos
+    headers = [th.get_text(strip=True) for th in table.find('thead').find_all('th')]
 
-def get_commercialization_data():
-    response = requests.get(f'{BASE_URL}comercializacao')
-    soup = BeautifulSoup(response.content, 'html.parser')
-    # Lógica de scraping específica para a aba de comercialização
-    data = {}
-    return data
+    # Extraindo dados da tabela
+    data = []
+    for row in table.find('tbody').find_all('tr'):
+        cols = row.find_all('td')
+        item = {headers[i]: cols[i].get_text(strip=True) for i in range(len(cols))}
+        data.append(item)
 
+    # Extraindo o total da tabela
+    total_row = table.find('tfoot').find('tr')
+    if total_row:
+        total_label = total_row.find('td').get_text(strip=True)
+        total_value = total_row.find_all('td')[1].get_text(strip=True)
+        total = {total_label: total_value}
+    else:
+        total = {}
 
-def get_importation_data():
-    response = requests.get(f'{BASE_URL}importacao')
-    soup = BeautifulSoup(response.content, 'html.parser')
-    # Lógica de scraping específica para a aba de importação
-    data = {}
-    return data
+    result = {
+        'base_title': title_text,
+        'data': data,
+        'total': total
+    }
 
-
-def get_exportation_data():
-    response = requests.get(f'{BASE_URL}exportacao')
-    soup = BeautifulSoup(response.content, 'html.parser')
-    # Lógica de scraping específica para a aba de exportação
-    data = {}
-    return data
+    return result

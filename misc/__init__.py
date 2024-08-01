@@ -1,22 +1,17 @@
-from flask import Flask
+from flask import Flask, request, render_template, jsonify
 from flask_restful import Api
-from .api import (
-    ProductionResource,
-    ProcessingResource,
-    CommercializationResource,
-    ImportationResource,
-    ExportationResource
-)
+from .api import ApiResource
 
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(__name__, template_folder='..\html')
     api = Api(app)
 
-    api.add_resource(ProductionResource, '/producao')
-    api.add_resource(ProcessingResource, '/processamento')
-    api.add_resource(CommercializationResource, '/comercializacao')
-    api.add_resource(ImportationResource, '/importacao')
-    api.add_resource(ExportationResource, '/exportacao')
+    # Adicionando o recurso para produção
+    api.add_resource(ApiResource, '/api')
+
+    @app.route('/')
+    def welcome():
+        return render_template('test.html')
 
     return app

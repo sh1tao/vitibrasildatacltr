@@ -78,7 +78,7 @@ No Unix/MacOS:
   - `http://localhost:5000/api/?ano=2023&opcao=opt_02`
   - `http://localhost:5000/api/?ano=2023&opcao=opt_03&subopcao=subopt_01`
 
-4. Para acessar a documentação Swagger, vá para: `http://127.0.0.1:5000/api/docs/`
+4. Para acessar a documentação Swagger, vá para: `http://127.0.0.1:5000/apidocs/`
 
 ## Exemplo de Resposta da API
     {

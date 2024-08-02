@@ -6,29 +6,28 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.3;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
         }
         .container {
             width: 80%;
-            margin: auto;
             overflow: hidden;
-            padding: 20px;
+            padding: 10px;
             background: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
+            margin: 15px auto auto;
         }
-        h1, h2 {
+        h1, h3 {
             color: #333;
         }
         h1 {
             border-bottom: 2px solid #333;
-            padding-bottom: 10px;
+            padding-bottom: 5px;
         }
         p {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         a {
             color: #007BFF;
@@ -39,7 +38,7 @@
         }
         .endpoint {
             padding: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             background: #f9f9f9;
             border-left: 5px solid #007BFF;
         }
@@ -51,19 +50,19 @@
         <p>Use os endpoints abaixo da API para acessar os dados.</p>
 
         <div class="endpoint">
-            <h2>Docs</h2>
-            <p><a href="http://127.0.0.1:5000/api/docs">http://127.0.0.1:5000/api/docs</a></p>
+            <h3>Docs</h3>
+            <p><a href="http://127.0.0.1:5000/api/docs">http://127.0.0.1:5000/apidocs/</a></p>
         </div>
 
         <div class="endpoint">
-            <h2>Produção</h2>
+            <h3>Produção</h3>
             <p>opcao=[opt_02]<br>
             ano=[1970-2023]<br>
             Ex: <a href="http://127.0.0.1:5000/api/?ano=2023&opcao=opt_02">http://127.0.0.1:5000/api/?ano=2023&opcao=opt_02</a></p>
         </div>
 
         <div class="endpoint">
-            <h2>Processamento</h2>
+            <h3>Processamento</h3>
             <p>opcao=[opt_03]<br>
             subopcao=subopt_[01-04]<br>
             ano=[1970-2023]<br>
@@ -71,14 +70,14 @@
         </div>
 
         <div class="endpoint">
-            <h2>Comercialização</h2>
+            <h3>Comercialização</h3>
             <p>opcao=[opt_04]<br>
             ano=[1970-2023]<br>
             Ex: <a href="http://127.0.0.1:5000/api/?ano=2023&opcao=opt_04">http://127.0.0.1:5000/api/?ano=2023&opcao=opt_04</a></p>
         </div>
 
         <div class="endpoint">
-            <h2>Importação</h2>
+            <h3>Importação</h3>
             <p>opcao=[opt_05]<br>
             subopcao=subopt_[01-05]<br>
             ano=[1970-2023]<br>
@@ -86,7 +85,7 @@
         </div>
 
         <div class="endpoint">
-            <h2>Exportação</h2>
+            <h3>Exportação</h3>
             <p>opcao=[opt_06]<br>
             subopcao=subopt_[01-04]<br>
             ano=[1970-2023]<br>

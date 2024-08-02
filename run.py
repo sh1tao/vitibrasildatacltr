@@ -7,6 +7,9 @@ def show_usage():
 
     Para acessar a página inicial, abra o navegador e vá para:
     http://127.0.0.1:5000/
+    
+    Para acessar a documentação Swagger, vá para:
+    http://127.0.0.1:5000/apidocs/
 
     Para acessar a API, utilize a seguinte URL no seu navegador ou em uma ferramenta como cURL ou Postman:
     http://127.0.0.1:5000/api/?ano=<ano>&opcao=<opcao>&subopcao=<subopcao>
@@ -23,4 +26,4 @@ app = create_app()
 if __name__ == "__main__":
     show_usage()
     print("Inicializando o aplicativo...")  # Mensagem antes de iniciar o servidor
-    app.run(debug=True)
+    app.run(debug=False)

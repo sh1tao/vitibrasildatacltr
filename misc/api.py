@@ -38,13 +38,13 @@ class ApiResource(FlaskResource):
                 'in': 'query',
                 'type': 'string',
                 'required': True,
-                'description': 'opt_[01-04]'
+                'description': 'opt_[02-06]'
             },
             {
                 'name': 'subopcao',
                 'in': 'query',
                 'type': 'string',
-                'required': True,
+                'required': False,
                 'description': 'subopt_[01-05]'
             }
         ]

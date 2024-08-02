@@ -1,8 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 
-BASE_URL = 'http://vitibrasil.cnpuv.embrapa.br/index.php?ano={year}&opcao={option}&subopcao={suboption}'
+BASE_URL = 'http://vitibrasil.cnpuv.embrapa.br/index.php?ano={year}&opcao={option}&subopcao={suboption}' # URL base para a conexao.
 
+# Usando GET para se conectar no site e jogar os dados na lista
 def get_data(year='', option='', suboption='' ):
     url = BASE_URL.format(year=year, option=option, suboption=suboption)
     response = requests.get(url)
@@ -38,6 +39,7 @@ def get_data(year='', option='', suboption='' ):
     else:
         total = {}
 
+    # Mostrando o Resultado em JSON
     result = {
         'base_title': title_text,
         'data': data,

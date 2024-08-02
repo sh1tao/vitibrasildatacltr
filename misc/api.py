@@ -2,6 +2,7 @@ from flask import request, jsonify
 from flask_restful import Resource as FlaskResource
 from .scraping import get_data
 
+#Criacao de classe para retorno da chamada da API
 class ApiResource(FlaskResource):
     @staticmethod
     def get():

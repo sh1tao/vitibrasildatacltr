@@ -57,7 +57,7 @@ No Unix/MacOS:
 ### misc/scraping.py
 - Contém a lógica para fazer scraping dos dados do site VitiBrasil usando Requests e BeautifulSoup.
 
-### templates/welcome.html
+### html/index.html
 - Contém o template HTML para a página inicial.
 
 ## Uso

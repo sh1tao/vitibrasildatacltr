@@ -2,11 +2,14 @@
 
 Este é um projeto Flask que fornece uma API para acessar dados de produção do site VitiBrasil. A API permite que os usuários obtenham dados de produção com base em parâmetros de ano, opção e subopção.
 
+## Ambiente em producao
+`http://18.231.195.115:5000/apidocs`
+
 ## Estrutura do Projeto
 
     vitibrasildatacltr/
     ├── misc/
-    │ ├── init.py
+    │ ├── __init.py__
     │ ├── api.py
     │ ├── scraping.py
     ├── templates/

@@ -1,3 +1,4 @@
+from waitress import serve
 from misc import create_app
 
 
@@ -25,5 +26,5 @@ app = create_app()
 
 if __name__ == "__main__":
     show_usage()
-    print("Inicializando o aplicativo...")  # Mensagem antes de iniciar o servidor
-    app.run(host='0.0.0.0', port=5000)
+    print("Aplicativo em execucao...")  # Mensagem antes de iniciar o servidor
+    serve(app, host='0.0.0.0', port=5000)

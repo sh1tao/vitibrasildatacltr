@@ -1,17 +1,20 @@
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, render_template
 from flask_restful import Api
+
 from .api import ApiResource
 
 
+# Cria a funcao para chamada da Api
 def create_app():
     app = Flask(__name__, template_folder='..\html')
-    api = Api(app)
+    application = Api(app)
 
-    # Adicionando o recurso para produção
-    api.add_resource(ApiResource, '/api')
+    # Adicionando o recurso para api
+    application.add_resource(ApiResource, '/api')
 
+    # Rota para Pagina Inicial
     @app.route('/')
     def welcome():
-        return render_template('test.html')
+        return render_template('index.html')
 
     return app

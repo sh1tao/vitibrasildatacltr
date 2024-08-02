@@ -2,25 +2,97 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo</title>
+    <title>VitiBrasil Embrapa API</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
-        h1 {
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        h1, h2 {
             color: #333;
         }
+        h1 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
         p {
-            color: #666;
+            margin-bottom: 20px;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .endpoint {
+            padding: 10px;
+            margin-bottom: 20px;
+            background: #f9f9f9;
+            border-left: 5px solid #007BFF;
         }
     </style>
 </head>
 <body>
-    <h1>VitiBrasil Embrapa API</h1>
-    <p>Use os endpoints abaixo API para acessar os dados.</p>
-    <p>Use os endpoints abaixo API para acessar os dados.</p>
+    <div class="container">
+        <h1>VitiBrasil Embrapa API</h1>
+        <p>Use os endpoints abaixo da API para acessar os dados.</p>
+
+        <div class="endpoint">
+            <h2>Docs</h2>
+            <p><a href="http://127.0.0.1:5000/api/docs">http://127.0.0.1:5000/api/docs</a></p>
+        </div>
+
+        <div class="endpoint">
+            <h2>Produção</h2>
+            <p>opcao=[opt_02]<br>
+            ano=[1970-2023]<br>
+            Ex: <a href="http://127.0.0.1:5000/api/?ano=2023&opcao=opt_02">http://127.0.0.1:5000/api/?ano=2023&opcao=opt_02</a></p>
+        </div>
+
+        <div class="endpoint">
+            <h2>Processamento</h2>
+            <p>opcao=[opt_03]<br>
+            subopcao=subopt_[01-04]<br>
+            ano=[1970-2023]<br>
+            Ex: <a href="http://127.0.0.1:5000/api/?ano=2023&opcao=opt_03&subopcao=subopt_01">http://127.0.0.1:5000/api/?ano=2023&opcao=opt_03&subopcao=subopt_01</a></p>
+        </div>
+
+        <div class="endpoint">
+            <h2>Comercialização</h2>
+            <p>opcao=[opt_04]<br>
+            ano=[1970-2023]<br>
+            Ex: <a href="http://127.0.0.1:5000/api/?ano=2023&opcao=opt_04">http://127.0.0.1:5000/api/?ano=2023&opcao=opt_04</a></p>
+        </div>
+
+        <div class="endpoint">
+            <h2>Importação</h2>
+            <p>opcao=[opt_05]<br>
+            subopcao=subopt_[01-05]<br>
+            ano=[1970-2023]<br>
+            Ex: <a href="http://127.0.0.1:5000/api/?ano=2023&opcao=opt_05&subopcao=subopt_01">http://127.0.0.1:5000/api/?ano=2023&opcao=opt_05&subopcao=subopt_01</a></p>
+        </div>
+
+        <div class="endpoint">
+            <h2>Exportação</h2>
+            <p>opcao=[opt_06]<br>
+            subopcao=subopt_[01-04]<br>
+            ano=[1970-2023]<br>
+            Ex: <a href="http://127.0.0.1:5000/api/?ano=2023&opcao=opt_06&subopcao=subopt_01">http://127.0.0.1:5000/api/?ano=2023&opcao=opt_06&subopcao=subopt_01</a></p>
+        </div>
+    </div>
 </body>
 </html>
+

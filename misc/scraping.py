@@ -15,6 +15,10 @@ def get_data(year='', option='', suboption='' ):
     text_p = soup.find('p', class_='text_center')
     title_text = text_p.get_text(strip=True) if text_p else 'Texto não encontrado'
 
+    # Capturando o texto da <p class="subtitle_2">
+    text_p = soup.find('p', class_='subtitle_2')
+    subtitle_text = text_p.get_text(strip=True) if text_p else 'Texto não encontrado'
+
     # Capturando a tabela
     table = soup.find('table', {'class': 'tb_base tb_dados'})
     if not table:
@@ -42,6 +46,7 @@ def get_data(year='', option='', suboption='' ):
     # Mostrando o Resultado em JSON
     result = {
         'base_title': title_text,
+        'adesc': subtitle_text,
         'data': data,
         'total': total
     }

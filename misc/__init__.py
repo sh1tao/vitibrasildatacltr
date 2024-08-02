@@ -1,18 +1,24 @@
 from flask import Flask, render_template
 from flask_restful import Api
-
+from flasgger import Swagger
 from .api import ApiResource
 
-
-# Cria a funcao para chamada da Api
 def create_app():
-    app = Flask(__name__, template_folder='..\html')
-    application = Api(app)
+    app = Flask(__name__, template_folder='../html')
 
+    # Configuração do Swagger
+    app.config['SWAGGER'] = {
+        'title': 'API VitiBrasil',
+        'uiversion': 3
+    }
+    swagger = Swagger(app)
+
+
+    api = Api(app)
     # Adicionando o recurso para api
-    application.add_resource(ApiResource, '/api')
+    api.add_resource(ApiResource, '/api/')
 
-    # Rota para Pagina Inicial
+    # Rota para Página Inicial
     @app.route('/')
     def welcome():
         return render_template('index.html')

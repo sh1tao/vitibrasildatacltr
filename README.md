@@ -68,17 +68,20 @@ No Unix/MacOS:
 2. Abra seu navegador e navegue até ``http://localhost:5000/`` para ver a página inicial com instruções.
 
 3. Use a API para acessar dados de produção: 
-- Endpoint: /api
+- Endpoint: /api/
 - Parâmetros:
-  - ano: O ano dos dados de produção (por exemplo, 2023)
-  - opcao: A opção de dados (por exemplo, opt_02)
-  - subopcao: A sub opção necessarias para as opt_03, opt05 e opt_06 (por exemplom, subopt_01)
+  - ano: O ano dos dados de produção (por exemplo, ``2023``)
+  - opcao: A opção de dados (por exemplo, ``opt_02``)
+  - subopcao: A sub opção necessarias para as opt_03, opt05 e opt_06 (por exemplom, ``subopt_01``)
 - Exemplos de URL:
-  - `http://localhost:5000/api?ano=2023&opcao=opt_02`
-  - `http://localhost:5000/api?ano=2023&opcao=opt_03&subopcao=subopt_01`
+  - `http://localhost:5000/api/?ano=2023&opcao=opt_02`
+  - `http://localhost:5000/api/?ano=2023&opcao=opt_03&subopcao=subopt_01`
+
+4. Para acessar a documentação Swagger, vá para: `http://127.0.0.1:5000/api/docs/`
 
 ## Exemplo de Resposta da API
     {
+    "adesc": "Descricao"
     "base_title": "Titulo ["Ano"]",
     "data": [
         {

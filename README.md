@@ -25,7 +25,7 @@ Este é um projeto Flask que fornece uma API para acessar dados de produção do
 ## Instalação
 
 1. Clone o repositório para sua máquina local:
-``git clone https://github.com/seu-usuario/seu-repositorio.git``
+``git clone https://github.com/sh1tao/vitibrasildatacltr.git``
 
 2. Navegue até o diretório do projeto:
 ``cd vitibrasildatacltr``

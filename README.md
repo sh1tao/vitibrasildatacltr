@@ -21,6 +21,7 @@ Este é um projeto Flask que fornece uma API para acessar dados de produção do
 - Flask-RESTful
 - Requests
 - BeautifulSoup4
+- Swagger
 
 ## Instalação
 

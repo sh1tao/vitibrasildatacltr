@@ -3,6 +3,7 @@ from flask_restful import Api
 from flasgger import Swagger
 from .api import ApiResource
 
+
 def create_app():
     app = Flask(__name__, template_folder='../html')
 
@@ -11,8 +12,7 @@ def create_app():
         'title': 'API VitiBrasil',
         'uiversion': 3
     }
-    swagger = Swagger(app)
-
+    Swagger(app)
 
     api = Api(app)
     # Adicionando o recurso para api

@@ -43,6 +43,17 @@ No Unix/MacOS:
 5. Instale as dependências:
 ``pip install -r requirements.txt``
 
+## Docker
+
+Se estiver utilizando apenas o Docker:
+
+``docker build -t vitibrasil-app .``
+
+``docker run -p 5000:5000 vitibrasil-app``
+
+Se estiver utilizando o Docker Compose:
+
+``docker-compose up --build``
 
 ## Estrutura dos Arquivos
 

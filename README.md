@@ -12,8 +12,8 @@ Este é um projeto Flask que fornece uma API para acessar dados de produção do
     │ ├── __init.py__
     │ ├── api.py
     │ ├── scraping.py
-    ├── templates/
-    │ └── welcome.html
+    ├── html/
+    │ └── index.html
     ├── run.py
     └── README.md 
 

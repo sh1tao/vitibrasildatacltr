@@ -92,10 +92,9 @@ Se estiver utilizando o Docker Compose:
   - ano: O ano dos dados de produção (por exemplo, ``2023``)
   - opcao: A opção de dados (por exemplo, ``opt_02``)
   - subopcao: A sub opção necessarias para as opt_03, opt05 e opt_06 (por exemplom, ``subopt_01``)
-- Exemplos de URL:
-  - `http://localhost:5000/api/?ano=2023&opcao=opt_02`
-  - `http://localhost:5000/api/?ano=2023&opcao=opt_03&subopcao=subopt_01`
-
+  - Exemplos de URL:
+    - `http://localhost:5000/api/?ano=2023&opcao=opt_02`
+    - `http://localhost:5000/api/?ano=2023&opcao=opt_03&subopcao=subopt_01`
 4. Para acessar a documentação Swagger, vá para: `http://127.0.0.1:5000/apidocs/`
 
 ## Exemplo de Resposta da API

@@ -5,6 +5,10 @@ Este é um projeto Flask que fornece uma API para acessar dados de produção do
 ## Ambiente em producao
 `http://18.231.195.115:5000/apidocs`
 
+
+## Criacao e Deploy
+`https://www.youtube.com/watch?v=tOe9cUNp7ng`
+
 ## Estrutura do Projeto
 
     vitibrasildatacltr/

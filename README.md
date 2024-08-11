@@ -4,13 +4,13 @@ Este é um projeto Flask que fornece uma API para acessar dados de produção do
 
 ## Diagrama de fluxo
 
-Este é um diiagrama de alto nível exemplificando um projeto com a api sendo utilizda.
-
+Este é um diagrama de alto nível exemplificando um projeto com a api sendo utilizda.
+![high_lvl_project](https://github.com/user-attachments/assets/e01761f2-cfbe-4457-aa37-63ae3a27142b)
 
 
 ## Ambiente em producao
 http://18.231.195.115:5000/apidocs
-![high_lvl_project](https://github.com/user-attachments/assets/e01761f2-cfbe-4457-aa37-63ae3a27142b)
+
 
 
 ## Criacao e Deploy
